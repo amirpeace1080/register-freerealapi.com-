@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1> {{ this.$store.state.token }} </h1>
+    <h1>{{ this.$store.state.token }}</h1>
 
     <label>Email: </label>
     <input type="text" v-model="email" />
@@ -13,7 +13,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Home",
   data() {
@@ -28,5 +27,6 @@ export default {
       let password = this.password;
       this.$store.dispatch("login", { email, password });
     },
+  },
 };
 </script>
